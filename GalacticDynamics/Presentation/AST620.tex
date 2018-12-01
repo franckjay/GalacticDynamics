@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+%\documentstyle[11pt]{article}
+\usepackage{makeidx,graphicx,epsf,myrefs,subfig,framed}
+
+\oddsidemargin 0.0in  
+\textwidth 6.5in
+\textheight 9.0in
+\parskip 0.75 em
+
+\newcommand{\singlesp}{\renewcommand{\baselinestretch}{1}\Large\normalsize}
+\newcommand{\doublesp}{\renewcommand{\baselinestretch}{1.6}\Large\normalsize}
+\newcommand{\etal}{{\it et~al.~}}
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\vs}{{\it vs.~}}
+\newcommand{\Msun}{\mbox{M$_{\odot}$}}
+\newcommand{\Rsun}{\mbox{R$_{\odot}$}}
+\def\lesssim{\mathrel{\hbox{\rlap{\hbox{\lower4pt\hbox{$\sim$}}}\hbox{$<$}}}}
+\def\gtrsim{\mathrel{\hbox{\rlap{\hbox{\lower4pt\hbox{$\sim$}}}\hbox{$>$}}}}
+\def\ggg{\mathrel{\hbox{\rlap{\hbox{\lower4pt\hbox{$\sim$}}}\hbox{$>$}}}}
+\def\persec{s$^{-1}$}
+
+\renewcommand{\thepage}{\arabic{page}}
+
+
+
+\newcommand{\ssection}[1]{%
+     \section[#1{\rm \dotfill}]{\bf #1}}
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {1.0ex \@plus 0ex \@minus -.2ex}%
+                                   {0.1ex \@plus.2ex}%
+                                   {\normalfont\large\bfseries}}
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+                                   {0.5ex \@plus 0ex \@minus -.2ex}%
+                                   {0.1ex \@plus.2ex}%
+                                   {\normalfont\bfseries}}
+\renewcommand\subsubsection{\@startsection {subsubsection}{1}{\z@}%
+                                   {0.00ex \@plus 0ex \@minus -.2ex}%
+                                   {0.ex \@plus.2ex}%
+                                   {\normalfont\bfseries}}
+\makeatother
+
+\renewcommand{\thesection}{\arabic{section}.}
+
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
+
+\newcommand{\RR}{\par\hangindent=3.0em\hangafter=1}
+
+\newenvironment{changemargin}[2]{%
+ \begin{list}{}{%
+  \setlength{\topsep}{0pt}%
+  \setlength{\leftmargin}{#1}%
+  \setlength{\rightmargin}{#2}%
+  \setlength{\listparindent}{\parindent}%
+  \setlength{\itemindent}{\parindent}%
+  \setlength{\parsep}{\parskip}%
+ }%
+\item[]}{\end{list}}
+
+\setlength{\columnsep}{20pt}
+
+
+
+\voffset -20mm
+
+
+\begin{document}
+
+\parindent 0ex
+
+\ssection{Is there a Size Difference between Red and Blue Globular Clusters?}
+
+\subsection{J.R. Franck}\vspace{-0.5em}
+
+The paper that I am reviewing is by J.M.B. Downing (2012,$arXiv:1204.5363v1$). Observationally, there are essentially two types of Globular Clusters: Blue and Red. These are distinguished by their metallicity, red being the more metal rich clusters. When the sizes of these respective clusters are measured by their half-light radii ($r_{hl}$), the blue globular clusters are consistently $\approx 20 \% $ larger (Harris 2009). To explain this, Larsen and Brodie (2003) note that the differing distributions of Red and Blue globular clusters in our galaxy depend on the distance to the center of the Milky Way, and that maybe this observation is simply a selection effect.  A careful study by the aforementioned Harris 2009 study shows that the half-light radius does not depend on distance from the center of the galaxy.
+
+Jordan (2004) posited that the evolutionary differences between metal rich and metal poor clusters are the cause. In order to provide further insight into these observations, Schulman et al. (2012) ran an N-body simulation of Globular Clusters with red and blue metallicities. They allowed the simulation to evolve to 13 billion years and measured the  half-light radii and  half-mass radii $r_{hm}$ of the different populations as a function of time. They found that they could match the observed $r_{hl}$, but their N-body simulation had 1-2 orders of magnitude fewer stars than a typical Globular Cluster.
+
+In response to these other attempts to explain the apparent difference in size between these two globular clusters, Downing used a Monte Carlo simulation, which was originally used to model black hole binaries in Globular Clusters. A Monte Carlo simulation has the advantage of being much faster than Schulman et al.'s N-body model (1 day run time versus over a month), and Downing's code has the typical number of stars ($5 \times 10^5$) found in a GC (unlike the watered-down version of Schulman et al.). The code is run from $t=0$ to 13 Gyrs, with red clusters modeled as having a metallicity of $Z=0.02$ and blue with $Z=0.001$. The simulation is run with three different stellar concentrations (tidal radius divided by the radius at half mass). The initial populations are modelled on the IMF of Kroupa et al. (1993).
+
+The results of the simulation show that the $r_{hm}$ were about 20 percent greater for Blue clusters than Red, but that $r_{hl}$ were $\approx 40 \%$ greater. Even more surprising, that the BH interactions that the code was initially built to model had a significant effect on $r_{hm}$ and $r_{hl}$. Further simulations in which all BHs are dynamically kicked out of the system result in size differences between the two clusters to be $\approx 2-4 \%$. Dynamical interactions of the BHs in the system have a significant impact on the size of the GCs, where Blue clusters have a larger number of BHs with a greater average mass. These BH interactions tend to expel stars out of the cluster, thus decreasing the gravitational potential and allowing the cluster to increase in size. The $r_{hl}$ was found to be not a great indicator of cluster size, as the inner 10$\%$ of red clusters was found to be $\approx 73\%$ of the total luminosity of the cluster, compared to $\approx 57 \%$ in blue clusters, showing $r_{hm}$ is a better indicator of simulated cluster size. I chose this paper because Black Hole interactions are awesome, and fossils (Globular Clusters) are pretty cool, too.
+
+\newpage
+
+%
+%  put your references here on a second page
+%
+%
+
+\section{References}
+
+\vspace{-2ex}
+
+\begin{references}
+\begin{changemargin}{-2ex}{0ex}
+\begin{enumerate}
+
+\item
+Downing, J.M.B., 2012, $arXiv:1204.5363v1$
+
+\item
+Harris, W.E.,2009, {ApJ}, 699, 254
+
+\item
+Jordan, A.,2004, {ApJ}, 613, 117
+
+\item
+Kroupa, P., et al., 1993, {MNRAS}, 251, 293
+
+\item
+Schulman, R.D., et al., 2012, {MNRAS}, 420, 651
+
+
+\end{enumerate}
+
+\end{changemargin}
+
+
+\end{references}
+
+
+
+\clearpage
+
+
+
+\end{document}
